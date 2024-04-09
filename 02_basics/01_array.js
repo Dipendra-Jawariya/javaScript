@@ -37,3 +37,5 @@ console.log("B ", myArr);
 const myn2 = myArr.splice(1, 3)
 console.log("C ", myArr);
 console.log(myn2);
+// slice() extracts elements into a new array without modifying the original. 
+// splice() changes the contents of the original array. Parameters - slice() takes two optional params, begin & end
