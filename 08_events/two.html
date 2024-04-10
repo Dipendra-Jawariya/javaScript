@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai Aur Code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setTimeOut --> method h jo api call bhi krta h 
+    //  Y core javascript k part nhi h 
+
+    // 2 second ka time do fir apna kaam kro
+    // setTimeout(function () {
+    //     console.log("Dipendra Jawariya");
+    // }, 2000)
+
+    // set Interval voh kaam ko krta hi jata h after that interval
+    // setInterval(function() {
+    //     console.log("Dipendra Jawariya");
+    // },3000)
+
+
+    const sayDipendra = () => {
+        console.log("Dipendra Jawariya");
+    }
+    const changeText = () => {
+        document.querySelector('h1').innerHTML = "This is Javascript"
+    }
+    const changeMe = setTimeout(changeText,2000);
+    const button = document.querySelector('#stop');
+    button.addEventListener('click', () => {
+        clearTimeout(changeMe);
+        console.log("STOPPED");
+    });
+    // clearTimeout(changeMe)  // clearTimeout ko refernce chahiye hota ki konse setimeout ko roku
+    // setInterval(sayDipendra,2000);
+
+</script>
+</html>
