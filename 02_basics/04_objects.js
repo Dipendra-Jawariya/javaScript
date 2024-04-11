@@ -29,7 +29,7 @@ const obj2 = {3: "a", 4: "b"}
 //console.log(obj3); // shows { obj1: { '1': 'a', '2': 'b' }, obj2: { '3': 'a', '4': 'b' } }
 // const obj3 = Object.assign({} ,obj1,obj2); // target source
 
-const obj3 = {...obj1,...obj2} // using spreat operator
+const obj3 = {...obj1,...obj2} // using spreade operator
 // console.log(obj3);
 
 

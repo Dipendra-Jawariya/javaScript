@@ -9,7 +9,7 @@ let valueInNumber = Number(score);
 
 
 // "33" ==> 33 
-// "33ab " ==?> NaN
+// "33ab " ==> NaN
 // true ==> 1;
 // false ==> 0;
 
