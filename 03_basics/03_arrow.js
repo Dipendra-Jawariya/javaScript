@@ -29,10 +29,10 @@ const user = {
 // Arrow Function
 const chai = () => {
     let userName = "Dipendra";
-    console.log(this.userName);  // show undefined
+    return console.log(this.userName);  // show undefined
 }
 
-// chai();
+(chai());
 
 // const addTwo = (num1,num2) => { // explicit return
 //     return num1 + num2;
