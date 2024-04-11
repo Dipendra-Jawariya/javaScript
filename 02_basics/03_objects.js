@@ -10,7 +10,7 @@
 
 
  
-//  Object literals 
+//  Object literals  {}
 const mySym = Symbol("key1");
 const JsUser  = {
     //Key : "Value" 
@@ -53,4 +53,59 @@ JsUser.greeting2 = function() {
 // console.log(JsUser.greeting); // shows [Function (anonymous)]  return aaya h ek function exrcute nhi hua h
 console.log(JsUser.greeting()); // shows Hello Js User
 console.log(JsUser.greeting2()); // shwos Hello Js User,Dipendra
+
+
+
+
+//  methods of creating object in javascript
+// 1. OBJECT LITERALS
+const person = {
+    name : 'Dipendra',
+    age : 30,
+    gender : male
+}
+
+// 2. Constructor Function 
+function Person(name, age,gender) {
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+}
+const person1 = new Person('Dipendra',23,male);
+const person2 = new Person('Alice',23,female);
+
+// 3. Object.create() 
+const personPrototype = {
+    greeting : function() {
+        console.log(`Hello!`);
+    }
+}
+
+const personObj = Object.create(personPrototype);
+personObj.name = 'Dipendra';
+personObj.age = 23;
+personObj.gender = 'male';
+personObj.greeting();
+
+
+// ES6 Classes
+class Person {
+    constructor(name,age,gender) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+    }
+}
+let personClass_obj = new Person('DIpendra',22,'male');
+
+//  5. Factory Function
+// Factory functions are functions that return objects.
+function createPerson(name,age,gender) {
+    return {
+        name : name,
+        age : age,
+        gender : gender
+    };
+}
+let person_fucntion_obj = new createPerson('Dipndra',30,'male');
 

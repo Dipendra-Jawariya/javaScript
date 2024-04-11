@@ -26,7 +26,7 @@ function addTwoNumer(num1,num2){
     return num1 + num2;
 }
 const result = addTwoNumer(1,"3"); //shows 13
-// console.log(`Result : ${result}`) //  13 shows Result : undefined
+console.log(`Result : ${result}`) //  13 shows Result : undefined
 
 function loggedInUserMsg(userName) {
     return `${userName} just loggedIn` 
@@ -62,3 +62,14 @@ function returnSecondValue(getArr) {
 }
 
 console.log(returnSecondValue(mynewArr));
+
+// 4. Function Constructor: The Function constructor can be used to create a new function object dynamically.
+let greet = new Function(`console.log("Hello!")`);
+
+//  5. Function as a Method
+let person = {
+    name :'dipenra',
+    greet : function() {
+        console.log(`Hello!`);
+    }
+}
